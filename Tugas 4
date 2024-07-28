@@ -1,0 +1,26 @@
+Dockerfile :
+FROM nginx:alpine
+
+# Copy the HTML file to the Nginx server
+COPY index.html /usr/share/nginx/html/index.html
+
+# Expose port 80 to the outside world
+EXPOSE 80
+
+# Start Nginx when the container starts
+CMD ["nginx", "-g", "daemon off;"]
+
+Index.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+</head>
+<body>
+    <h1>Welcome to My Personal Website</h1>
+    <p>Hello! My name is Wahyu Marga Pratama.</p>
+</body>
+</html>
+
